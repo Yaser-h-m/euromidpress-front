@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -8,22 +8,26 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [
-      tailwindcss(),
-    ],
+      tailwindcss()
+    ]
   },
   modules: [
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/icon',
     '@nuxt/image',
-     '@primevue/nuxt-module'
+    '@primevue/nuxt-module'
   ],
   fonts: {
     families: [
-      { name: 'Roboto Slab', provider: 'google', weights: [400, 500, 600, 700], global: true, },
+      { name: 'Roboto Slab', provider: 'google', weights: [400, 500, 600, 700], global: true }
     ]
   },
-   primevue: {
-        /* Configuration */
-    }
+  primevue: {
+    /* Configuration */
+  },
+  icon: {
+    mode: 'css',
+    cssLayer: 'base'
+  }
 })
