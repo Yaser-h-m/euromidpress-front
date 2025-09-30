@@ -20,5 +20,9 @@
                 />
             </a>
         </div>
+        <Divider type="solid" />
+        <div class="flex items-center justify-between">
+            <h1>Logo+Search</h1>
+        </div>
     </div>
 </template>
