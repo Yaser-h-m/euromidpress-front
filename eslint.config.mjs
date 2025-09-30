@@ -41,12 +41,6 @@ export default withNuxt(
             '@stylistic/space-infix-ops': 'error',
             '@stylistic/no-trailing-spaces': 'error',
             '@stylistic/eol-last': 'error',
-            '@stylistic/max-len': ['error', {
-                code: 100,
-                ignoreUrls: true,
-                ignoreStrings: true,
-                ignoreTemplateLiterals: true
-            }],
             '@stylistic/brace-style': ['error', '1tbs'],
             '@stylistic/comma-spacing': ['error', { before: false, after: true }],
             '@stylistic/key-spacing': ['error', { beforeColon: false, afterColon: true }],

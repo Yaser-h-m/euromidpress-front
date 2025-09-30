@@ -1,6 +1,5 @@
 <template>
-    <div class="">
-        <Navbar />
-        <h1>hi</h1>
+    <div>
+        <h1>hi from index</h1>
     </div>
 </template>

@@ -19,7 +19,7 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[css]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "vscode.css-language-features"
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
