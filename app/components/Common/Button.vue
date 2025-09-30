@@ -21,7 +21,7 @@ const props = defineProps<{
 <style>
 .primary-btn{
     background-color: var(--color-primary-600);
-    color: var(--color-white) ;
+    color: var(--color-white-0) ;
 }
 </style>
 //!TODO: Work on progress
