@@ -3,13 +3,13 @@ import type { LinkVariants } from '~/types/LinkVariants'
 
 
 const props = defineProps<{
-  linkAddress?: string
-  variant?: LinkVariants
+    linkAddress?: string
+    variant?: LinkVariants
 }>()
 
 </script>
 <template>
-  <NuxtLink :to="props.linkAddress" :class="props.variant" />
+    <NuxtLink :to="props.linkAddress" :class="props.variant" />
 </template>
 
 <style>
