@@ -51,11 +51,11 @@ body {
   margin: 0 auto;
   background-color: var(--color-white-100);
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1024px) {
     max-width: 835px;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
     max-width: 100%;
   }
 }
@@ -63,17 +63,17 @@ body {
 .responsive-spacing {
   padding-inline: 100px;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1024px) {
     padding-inline: 32px;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
     padding-inline: 16px;
   }
 }
 
 .desktop-only {
-  @media (max-width: 1000px) {
+  @media (max-width: 1024px) {
     display: none;
   }
 }
@@ -81,7 +81,7 @@ body {
 .mobile-tablet-only {
   display: none;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1024px) {
     display: block;
   }
 }

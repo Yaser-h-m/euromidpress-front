@@ -53,7 +53,6 @@
                     alt="Euromidpress Logo"
                     width="155"
                     class="object-contain"
-                    data-nuxt-img="false"
                 >
             </NuxtLink>
             <div class="nav-items flex items-center justify-between gap-16 rounded-4xl bg-primary-500">
