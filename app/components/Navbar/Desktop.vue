@@ -4,7 +4,7 @@
 </script>
 
 <template>
-    <div class="flex flex-col bg-white-0 w-full">
+    <div class="flex flex-col bg-white-0 w-full desktop-only">
         <!-- Upper side of Navbar -->
         <div class="flex items-center justify-between w-full responsive-spacing">
             <div class="pt-4 flex items-center gap-2.5">
@@ -48,14 +48,15 @@
         <!-- Bottom side of Navbar -->
         <div class="flex items-center justify-between responsive-spacing pb-3">
             <NuxtLink to="/">
-                <NuxtImg
-                    src="/images/logo.png"
+                <img
+                    src="/img/logo.png"
+                    alt="Euromidpress Logo"
                     width="155"
-                    fit="contain"
-                    loading="eager"
-                />
+                    class="object-contain"
+                    data-nuxt-img="false"
+                >
             </NuxtLink>
-            <div class="nav-items flex items-center justify-end gap-24  rounded-4xl bg-primary-500">
+            <div class="nav-items flex items-center justify-between gap-16 rounded-4xl bg-primary-500">
                 <div class="flex items-center gap-6 px-8 py-3">
                     <NuxtLink
                         to="/"
@@ -67,21 +68,21 @@
                     <NuxtLink
                         to="/about"
                         class="text-white-0 text-lg hover:text-secondary-500"
-                        active-class="text-secondary-500 font-semibold underline underline-offset-4"
+                        active-class="!text-secondary-500 font-semibold underline underline-offset-4"
                     >
                         About Us
                     </NuxtLink>
                     <NuxtLink
                         to="/services"
                         class="text-white-0 text-lg hover:text-secondary-500"
-                        active-class="text-secondary-500 font-semibold underline underline-offset-4"
+                        active-class="!text-secondary-500 font-semibold underline underline-offset-4"
                     >
                         Services
                     </NuxtLink>
                     <NuxtLink
                         to="/contact"
                         class="text-white-0 text-lg hover:text-secondary-500"
-                        active-class="text-secondary-500 font-semibold underline underline-offset-4"
+                        active-class="!text-secondary-500 font-semibold underline underline-offset-4"
                     >
                         Contact
                     </NuxtLink>
@@ -92,7 +93,7 @@
                         name="mingcute:search-line"
                         class="bg-primary-500 mr-2"
                     />
-                    <input type="text" placeholder="Search..." class=" outline-none text-md px-2">
+                    <input type="text" placeholder="Search..." class="text-sm text-primary-500 outline-none text-md px-2 placeholder:text-primary-500 font-semibold">
                 </div>
             </div>
         </div>

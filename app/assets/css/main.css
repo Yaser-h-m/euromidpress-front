@@ -71,3 +71,17 @@ body {
     padding-inline: 16px;
   }
 }
+
+.desktop-only {
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.mobile-tablet-only {
+  display: none;
+
+  @media (max-width: 1000px) {
+    display: block;
+  }
+}

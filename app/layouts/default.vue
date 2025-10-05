@@ -1,6 +1,6 @@
 <template>
     <div class="bg-white-100">
-        <Navbar />
+        <NavbarDesktop />
         <div>
             <slot />
         </div>
