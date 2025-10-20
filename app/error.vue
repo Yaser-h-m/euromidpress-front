@@ -32,6 +32,9 @@ const goHome = () => {
 const goBack = () => {
     history.back()
 }
+watch(props.error, (errNewVal) => {
+    console.error(errNewVal)
+})
 </script>
 
 <template>
