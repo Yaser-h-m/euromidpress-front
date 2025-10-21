@@ -8,7 +8,7 @@ defineProps<{
 
 
 <template>
-    <div class="flex flex-col gap-4 bg-card pt-8 pr-6 pb-4 pl-6 rounded-lg hover:bg-card/40 cursor-pointer">
+    <NuxtLink class="flex flex-col gap-4 bg-card pt-8 pr-6 pb-4 pl-6 rounded-lg hover:bg-card/40 cursor-pointer" :to="`/articles/${article.slug}`">
         <h2 class="text-primary-500 text-lg font-bold">{{ article.title }}</h2>
         <p class="text-sm text-white-600 line-clamp-2">{{ article.abstract }}</p>
         <div class="!font-bold text-xs !text-primary-500">
@@ -33,5 +33,5 @@ defineProps<{
                 custom-class="!text-secondary-500 hover:!text-primary-500"
             />
         </div>
-    </div>
+    </NuxtLink>
 </template>
