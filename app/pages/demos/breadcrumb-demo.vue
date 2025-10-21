@@ -11,8 +11,7 @@ const breadcrumbs: BreadcrumbItem[] = [
         link: '/articles'
     },
     {
-        label: 'Article 1',
-        link: '/articles/article-1'
+        label: 'Article 1'
     }
 ]
 </script>
