@@ -20,7 +20,7 @@ const handleSubscribe = () => {
 const { PT } = useInputTextPT()
 </script>
 <template>
-    <div class="flex flex-wrap items-center justify-between gap-2 py-10 px-[100px] bg-primary-500">
+    <div class="flex flex-wrap items-center justify-center md:justify-between gap-2 pt-10  bg-primary-500">
         <p class="text-white-0 font-semibold max-w-[440px] text-wrap text-center md:text-start text-lg md:text-xl">
             Get the latest EuroMid Press articles, books, and conference updates
         </p>
