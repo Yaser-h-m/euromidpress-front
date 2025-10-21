@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useValidateEmail } from '~/comopsables/PT/useEmailValidation'
-import { useInputTextPT } from '~/comopsables/PT/useInputTextPT'
+import { useValidateEmail } from '~/composables/useEmailValidation'
+import { useInputTextPT } from '~/composables/PT/useInputTextPT'
 
 const email = ref('')
 const errorMessage = ref('')
