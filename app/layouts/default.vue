@@ -5,9 +5,7 @@
         <div>
             <slot />
         </div>
-        <!-- footer  goes here -->
+
+        <Footer />
     </div>
 </template>
-<style>
-
-</style>

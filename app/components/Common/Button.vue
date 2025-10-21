@@ -30,7 +30,7 @@ const props = defineProps<{
             }
         ]"
     >
-        <span>
+        <span v-if="label" class="text-center w-full">
             {{ label }}
         </span>
         <Icon
