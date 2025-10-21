@@ -17,7 +17,7 @@ defineProps<{
         <div class="flex justify-between items-center">
             <div class="flex items-center gap-2">
                 <img
-                    :src="`https://avatar.iran.liara.run/username?username=${article.contributors?.[0]?.name[0]}`"
+                    :src="article.contributors?.[0]?.image"
                     width="30"
                     height="30"
                     class="rounded-full"
