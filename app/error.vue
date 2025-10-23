@@ -17,13 +17,13 @@ const is500 = computed(() => props.error.statusCode === 500)
 
 const errorTitle = computed(() => {
     if (is404.value) return 'Page Not Found'
-    if (is500.value) return 'Server Error'
+    if (is500.value) return 'Internal Server Error'
     return 'An Error Occurred'
 })
 
 const errorDescription = computed(() => {
     if (is404.value) return 'The page you tried to access isn’t available. It might have been updated or removed.'
-    if (is500.value) return 'Something went wrong on our end. We\'re working to fix it as quickly as possible.'
+    if (is500.value) return 'Something went wrong on our end. We’re working to fix the issue.'
     return props.error.message || 'An unexpected error occurred'
 })
 
