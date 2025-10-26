@@ -34,11 +34,11 @@ const props = defineProps<{
         </div>
         <p class="text-lg font-semibold text-primary-500 mb-4">{{ props.title }}</p>
         <NuxtLink
-            :to="props.link"
+            :to="'/'"
             class="flex items-center justify-start gap-0.5 text-sm text-secondary-500  font-semibold hover:text-primary-500"
         >
             <p>More Details</p>
-            <Icon name="material-symbols:arrow-forward-ios" class="ml-2 text-secondary-500  hover:text-primary-500" />
+            <Icon name="material-symbols:arrow-forward-ios" class="ml-2" />
         </NuxtLink>
     </div>
 </template>
