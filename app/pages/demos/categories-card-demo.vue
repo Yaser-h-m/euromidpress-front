@@ -5,6 +5,7 @@
                 src="/img/books-on-shelve.png"
                 alt="books on shelve"
                 class="block object-contain"
+                width="220"
             >
             <NuxtLink to="/" class="flex items-center gap-2 mt-2">
                 <span class="underline text-secondary-500 font-semibold hover:text-primary-500 flex items-center gap-2">
@@ -14,7 +15,7 @@
             </NuxtLink>
         </div>
         <Divider layout="vertical" class="self-stretch  !hidden md:!flex" :pt="{root:'!mx-0'}" />
-        <div class="flex flex-col gap-7 w-full">
+        <div class="flex flex-col gap-7">
             <CommonCategoryCard
                 v-for="i in 3"
                 :key="'left-' + i"
@@ -29,7 +30,7 @@
             />
         </div>
         <Divider layout="vertical" class="!hidden xl:!flex self-stretch" :pt="{root:'!mx-0'}" />
-        <div class="hidden xl:flex flex-col gap-14">
+        <div class="hidden xl:flex flex-col gap-7">
             <CommonCategoryCard
                 v-for="i in 3"
                 :key="'right-' + i"
