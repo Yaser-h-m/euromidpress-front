@@ -1,8 +1,6 @@
-import type { InputTextPassThroughMethodOptions } from 'primevue/inputtext'
-
 export const useInputTextPT = () => {
     const PT = computed(() => ({
-        root({ context }: InputTextPassThroughMethodOptions) {
+        root() {
             return {
                 class: [
                     '!h-[36px]',
