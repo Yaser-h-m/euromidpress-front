@@ -84,18 +84,13 @@ const proceedings = ref([
 
 const responsiveOptions = ref([
     {
-        breakpoint: '1200px',
-        numVisible: 2,
-        numScroll: 1
-    },
-    {
-        breakpoint: '1199px',
+        breakpoint: '1500px',
         numVisible: 2,
         numScroll: 1
     },
     {
         breakpoint: '900px',
-        numVisible: 2,
+        numVisible: 1,
         numScroll: 1
     },
     {
@@ -161,10 +156,10 @@ const responsiveOptions = ref([
                                     <Icon name="material-symbols:arrow-forward-ios" class="ml-2" />
                                 </NuxtLink>
                             </div>
-                            <div class="w-[725px]">
+                            <div class="xl:w-[725px] 2xl:w-[1200px]">
                                 <Carousel
                                     :value="proceedings"
-                                    :num-visible="2"
+                                    :num-visible="3"
                                     :responsive-options="responsiveOptions"
                                     :circular="true"
                                     :autoplay-interval="3000"
@@ -198,6 +193,119 @@ const responsiveOptions = ref([
                     </TabPanel>
                 </TabPanels>
             </Tabs>
+        </div>
+        <!-- Latest Research Articles Section -->
+        <!-- !TODO: Replace bg color with a variable -->
+        <div class="px-[100px] py-10 bg-[#f0f2f5] mb-20">
+            <h2 class="text-4xl font-semibold text-primary-500 mb-3 text-center">Latest Research Articles</h2>
+            <p class="text-lg text-white-600 max-w-[940px] text-center mb-10 mx-auto">EuroMid Press provides open access to peer-reviewed articles across multiple disciplines, supporting global knowledge sharing and academic collaboration.</p>
+            <div class="flex items-center justify-between gap-7 mb-7">
+                <CommonArticleItemCard
+                    class="self-stretch"
+                    :article="{
+                        title: 'AI in Healthcare: Opportunities and Challenges',
+                        abstract: 'This article explores the transformative impact of artificial intelligence on healthcare, discussing both the opportunities and the ethical challenges that arise.',
+                        published_at: new Date('2025-10-01'),
+                        slug: 'ai-in-healthcare',
+                        contributors: [
+                            { id: 1, name: 'Dr. Jane Smith', image: 'https://randomuser.me/api/portraits/women/1.jpg' }
+                        ]
+                    }"
+                />
+                <CommonArticleItemCard
+                    class="self-stretch"
+                    :article="{
+                        title: 'Renewable Energy Trends in 2025',
+                        abstract: 'A comprehensive review of the latest trends in renewable energy, including solar, wind, and emerging technologies, with a focus on global adoption and policy.',
+                        published_at: new Date('2025-09-15'),
+                        slug: 'renewable-energy-trends',
+                        contributors: [
+                            { id: 2, name: 'Prof. John Doe', image: 'https://randomuser.me/api/portraits/men/2.jpg' }
+                        ]
+                    }"
+                />
+                <CommonArticleItemCard
+                    class="self-stretch"
+                    :article="{
+                        title: 'The Future of Remote Work',
+                        abstract: 'Examining how remote work is reshaping industries, employee well-being, and the global economy, with insights from recent studies and expert interviews.',
+                        published_at: new Date('2025-08-20'),
+                        slug: 'future-of-remote-work',
+                        contributors: [
+                            { id: 3, name: 'Dr. Emily Zhang', image: 'https://randomuser.me/api/portraits/women/3.jpg' }
+                        ]
+                    }"
+                />
+                <CommonArticleItemCard
+                    class="self-stretch"
+                    :article="{
+                        title: 'The Future of Remote Work',
+                        abstract: 'Examining how remote work is reshaping industries, employee well-being, and the global economy, with insights from recent studies and expert interviews.',
+                        published_at: new Date('2025-08-20'),
+                        slug: 'future-of-remote-work',
+                        contributors: [
+                            { id: 3, name: 'Dr. Emily Zhang', image: 'https://randomuser.me/api/portraits/women/3.jpg' }
+                        ]
+                    }"
+                />
+            </div>
+            <NuxtLink
+                :to="'/'"
+                class="flex items-center justify-end w-full gap-0.5 text-sm text-primary-500  font-semibold hover:text-secondary-500"
+            >
+                <p>Show All</p>
+                <Icon name="material-symbols:arrow-forward-ios" class="ml-2" />
+            </NuxtLink>
+        </div>
+        <!-- Explore Categories Section -->
+        <div class="px-[100px] bg-white-100 pb-24">
+            <h2 class="text-4xl font-semibold text-primary-500 mb-8">Explore Our Categories</h2>
+            <div class="flex gap-9 p-8 items-stretch bg-white-0 md:shadow-lg w-full md:w-fit md:rounded-2xl m-3">
+                <div class="flex-col gap-8 hidden md:flex">
+                    <img
+                        src="/img/books-on-shelve.png"
+                        alt="books on shelve"
+                        class="block object-contain"
+                        width="220"
+                    >
+                    <NuxtLink to="/" class="flex items-center gap-2 mt-2">
+                        <span class="underline text-secondary-500 font-semibold hover:text-primary-500 flex items-center gap-2">
+                            View All Categories
+                            <Icon name="material-symbols:arrow-right-alt" size="15" />
+                        </span>
+                    </NuxtLink>
+                </div>
+                <Divider layout="vertical" class="self-stretch  !hidden md:!flex" :pt="{root:'!mx-0'}" />
+                <div class="flex flex-col gap-7">
+                    <CommonCategoryCard
+                        v-for="i in 3"
+                        :key="'left-' + i"
+                        title="Computer Science & Artificial Intelligence"
+                        link="https://www.google.com/"
+                        proceedings-title="Advances in Computer Science Research"
+                        proceedings-link="#"
+                        books-title="AI Books Collection"
+                        books-link="#"
+                        :fluid="true"
+                        class="w-full md:w-[400px]"
+                    />
+                </div>
+                <Divider layout="vertical" class="!hidden xl:!flex self-stretch" :pt="{root:'!mx-0'}" />
+                <div class="hidden xl:flex flex-col gap-7">
+                    <CommonCategoryCard
+                        v-for="i in 3"
+                        :key="'right-' + i"
+                        title="Computer Science & Artificial Intelligence"
+                        link="https://www.google.com/"
+                        proceedings-title="Advances in Computer Science Research  (Research)"
+                        proceedings-link="#"
+                        books-title="AI Books Collection"
+                        books-link="#"
+                        :fluid="true"
+                        class="w-full md:w-[400px]"
+                    />
+                </div>
+            </div>
         </div>
     </div>
 </template>
