@@ -7,8 +7,11 @@ const form = reactive({
     email: '',
     message: ''
 })
-const handleSubmit = () => {
-    console.log(form)
+const isLoading = ref(false)
+const handleSubmit = async () => {
+    isLoading.value = true
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    isLoading.value = false
 }
 </script>
 <template>
@@ -30,7 +33,7 @@ const handleSubmit = () => {
                 />
                 <label for="message" class="!text-primary-500 !bg-white-100">Your Message</label>
             </FloatLabel>
-            <CommonButton label="Submit" variant="secondary-btn" />
+            <CommonButton :is-loading="isLoading" label="Submit" variant="secondary-btn" />
         </form>
     </div>
 </template>
